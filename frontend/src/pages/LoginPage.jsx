@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useAuthStore } from '../store/useAuthStore';
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from "lucide-react";
+import AuthImagePattern from "../components/AuthImagePattern";
 import { Link } from "react-router-dom";
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -88,7 +89,7 @@ const LoginPage = () => {
               {isLoggingIn?(
                 <>
                   <Loader2 className='h-5 w-5 animate-spin'/>
-                  Loading///
+                  Loading...
                 </>
               ):(
                 "Sign in"
@@ -104,9 +105,16 @@ const LoginPage = () => {
             </Link>
             </p>
           </div>
-
         </div>
       </div>
+
+
+      {/* Right Side - Image/Pattern */}
+      <AuthImagePattern
+        title={"Welcome back!"}
+        subtitle={"Sign in to continue your conversations and catch up with your messages."}
+      />
+
     </div>
   )
 }
