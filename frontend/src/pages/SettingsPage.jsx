@@ -7,7 +7,6 @@ const PREVIEW_MESSAGES = [
   { id: 2, content: "I'm doing great! Just working on some new features.", isSent: true },
 ];
 
-
 const SettingsPage = () => {
   const { theme, setTheme } = useThemeStore();
 
